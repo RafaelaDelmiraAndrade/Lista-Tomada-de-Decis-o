@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class GastoCombustivel {
+	public static void main(String[]args) {
+		Scanner input=new Scanner(System.in);
+		double km, combustivel, gastoMedio;
+		System.out.println("Digite a distância percorrida em kilômetros:");
+		km=input.nextInt();
+		System.out.println("Digite a capacidade do tanque de combustível em litros:");
+		combustivel=input.nextInt();
+		gastoMedio = km/combustivel;
+		System.out.println("O gasto médio de combustível do seu veículo é de "+gastoMedio+" km/L.");
+		if(gastoMedio >= 10) {
+			System.out.println("Econômico");
+		}else {
+			System.out.println("Não econômico");
+			input.close();
+		}
+	}
+}
